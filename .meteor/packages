@@ -9,3 +9,4 @@ iron:router
 accounts-password
 fourseven:scss
 wolves:bourbon
+wolves:neat
