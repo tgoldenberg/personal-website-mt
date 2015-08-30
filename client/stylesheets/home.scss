@@ -28,6 +28,10 @@ li a {
 .project-container {
   padding: 1em;
   padding-left: 4em;
+  .project-link {
+    font-size: 2em;
+    font-weight: 300;
+  }
   li {
     list-style-type: none;
   }

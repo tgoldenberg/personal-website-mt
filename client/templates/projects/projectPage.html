@@ -1,3 +1,10 @@
 <template name="projectPage">
-	<h1>{{title}}</h1>
+	<div class="project-container">
+		<img class="project-image" src="{{imageUrl}}"/>
+		<li><a href="{{pathFor 'projectPage'}}">{{title}}</a></li>
+		<p class="project-description">{{description}}</p>
+		<br/>
+		<p class="project-link">Check out the website: <a href="{{link}}">{{title}}</a></p>
+		<p class="project-link">Check out the repo on <a href="{{github}}">Github</a></p>
+	</div>
 </template>
