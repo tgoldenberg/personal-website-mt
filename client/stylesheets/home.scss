@@ -21,3 +21,18 @@
 li a {
   font-size: 2.8em;
 }
+.project-image {
+  width: 15em;
+  height: 8em;
+}
+.project-container {
+  padding: 1em;
+  padding-left: 4em;
+  li {
+    list-style-type: none;
+  }
+  .project-description {
+    font-size: 1.2em;
+    width: 50%;
+  }
+}
