@@ -1,0 +1,19 @@
+<template name="sentence">
+  <p>
+    {{#each words}}
+      {{#if isLink this}}
+        {{# if lastWord this}}
+        <a href="{{pathFor this.link}}">{{this.word}}</a>.
+        {{else}}
+        <a href="{{pathFor this.link}}">{{this.word}}</a>
+        {{/if}}
+      {{else}}
+        {{# if lastWord this}}
+          {{this.word}}.
+        {{else}}
+          {{this.word}}
+        {{/if}}
+      {{/if}}
+    {{/each}}
+  </p>
+</template>

@@ -26,7 +26,8 @@ br {
 
 .profile-holder {
   display: flex;
-  margin-left: 4em;
+  width: 28em;
+  margin: auto;
   h2.profile-title {
     margin-top: 20px;
   }
@@ -50,6 +51,12 @@ br {
   }
   h1.page-title {
     color: darken($light-blue, 15%);
+  }
+  p.site-greeting {
+    font-style: italic;
+    margin-left: 2em;
+    font-size: 2em;
+    text-align: center;
   }
   p {
     font-size: 2.8em;
@@ -89,7 +96,7 @@ br {
 
 * {
   font-family: 'Lateef', cursive;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
   color: black;
   -webkit-margin-start: 0;
