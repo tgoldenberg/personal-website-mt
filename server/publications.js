@@ -1,3 +1,3 @@
-Meteor.publish('sentences', function(options) {
-  return Sentences.find();
+Meteor.publish('projects', function(options) {
+  return Projects.find();
 });
