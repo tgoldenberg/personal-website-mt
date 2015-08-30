@@ -64,7 +64,11 @@
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Tweets</h2>
-      <p>Fingerstache meh health goth, Odd Future irony pork belly pickled distillery selvage food truck mustache banh mi.</p>
+      <div class="tweets-feed">
+        {{#each tweets}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Github activity</h2>
