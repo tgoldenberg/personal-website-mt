@@ -8,9 +8,15 @@
     </div>
     <p class="site-greeting">Welcome to my website!</p>
     <div class="profile-holder social-icon-holder">
-      <a href="https://www.facebook.com/speakitlanguageapp"><img class="social-icons facebook" src="facebook.png" alt=""></a>
-      <a href="https://www.twitter.com/tomgoldenberg"><img class="social-icons twitter" src="twitter.png" alt=""></a>
-      <a href="https://www.linkedin.com/pub/tom-goldenberg/88/54b/670"><img class="social-icons linkedIn" src="linkedin.png" alt=""></a>
+      <a href="https://www.facebook.com/speakitlanguageapp">
+        <img class="social-icons facebook" src="facebook.png" alt="">
+      </a>
+      <a href="https://www.twitter.com/tomgoldenberg">
+        <img class="social-icons twitter" src="twitter.png" alt="">
+      </a>
+      <a href="https://www.linkedin.com/pub/tom-goldenberg/88/54b/670">
+        <img class="social-icons linkedIn" src="linkedin.png" alt="">
+      </a>
     </div>
     <div class="comment">
       <div class="comment-image">
@@ -35,7 +41,8 @@
           Here is a link to my <a href="{{pathFor 'music'}}">recordings</a>.
           I also try to record and reflect the varied experiences life throws at me in my
           <a href="{{pathFor 'personalBlog'}}">personal blog</a>.
-          I consider myself a <a href="{{pathFor 'read'}}">life learner</a> and am always looking to expand my knowledge.
+          I consider myself a <a href="{{pathFor 'read'}}">life learner</a>
+          and am always looking to expand my knowledge.
           I am ever grateful for having wonderful <a href="{{pathFor 'friends'}}">friends</a>,
           a loving <a href="{{pathFor 'jess'}}">life partner</a>, and a
           <a href="{{pathFor 'ella'}}">wondeful dog-ter</a>.
@@ -49,7 +56,7 @@
     <div class="space-break"></div>
     <div class="sidebar-content spotlight">
       <h2 class="sidebar-title">Spotlight</h2>
-      <p>Truffaut keytar American Apparel, sriracha irony pug Godard plaid. Brunch ugh Godard, Neutra narwhal squid meditation tofu cardigan gentrify iPhone. Tousled quinoa PBR, Tumblr shabby chic bespoke gastropub Pinterest put a bird on it cray authentic.</p>
+      <p><a href="{{pathFor 'projects'}}">SpeakIt</a> was featured in an article by Dev Bootcamp. The article talks about the challenges the SpeakIt team faced in developing an online language-exchange, and how they overcame them. Read more <a href="http://blog.devbootcamp.com/2015/speakit-learn-languages-from-native-speakers/">here</a></p>
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Blog Posts</h2>
@@ -57,7 +64,11 @@
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Tweets</h2>
-      <p>Fingerstache meh health goth, Odd Future irony pork belly pickled distillery selvage food truck mustache banh mi.</p>
+      <div class="tweets-feed">
+        {{#each tweets}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Github activity</h2>

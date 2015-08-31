@@ -21,3 +21,31 @@
 li a {
   font-size: 2.8em;
 }
+.project-image {
+  width: 15em;
+  height: 8em;
+}
+.project-container {
+  padding: 1em;
+  padding-left: 4em;
+  .project-link {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  li {
+    list-style-type: none;
+  }
+  .project-description {
+    font-size: 1.2em;
+    width: 50%;
+  }
+}
+.tweets-feed {
+  padding: .3em;
+  p {
+    background: white;
+    margin-top: .3em;
+    margin-bottom: .2em;
+    border-radius: 4px;
+  }
+}

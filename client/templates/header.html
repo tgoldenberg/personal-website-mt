@@ -21,9 +21,10 @@
           </li>
           <li class="nav-link more"><a href="#">Projects</a>
             <ul class="submenu">
-              <li><a href="{{pathFor 'projects'}}">SpeakIt</a></li>
-              <li><a href="{{pathFor 'projects'}}">ChessMentor</a></li>
-              <li><a href="{{pathFor 'projects'}}">SoTracks</a></li>
+              <li><a href="{{pathFor 'projects'}}">Overview</a></li>
+              {{# each projects}}
+                <li><a href="{{pathFor 'projectPage'}}">{{title}}</a></li>
+              {{/each}}
             </ul>
           </li>
           <li class="nav-link"><a href="{{pathFor 'resume'}}">Resume</a></li>
