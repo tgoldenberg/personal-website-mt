@@ -1,0 +1,15 @@
+.blog-container {
+  padding: 2em;
+  p.blog-paragraph {
+    text-align: left;
+    font-size: 1.5em;
+    width: 60%;
+    margin: auto;
+  }
+}
+.blog-content {
+  text-align: center;
+}
+p.blog-paragraph.main-paragraph {
+  text-align: center;
+}

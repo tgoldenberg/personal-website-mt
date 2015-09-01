@@ -1,0 +1,9 @@
+<template name="postPage">
+  <div class="blog-container blog-content">
+    <h1>{{title}}</h1>
+    <p class="blog-paragraph main-paragraph">{{mainParagraph}}</p><br/>
+    {{#each paragraphs}}
+      <p class="blog-paragraph">{{this}}</p><br/>
+    {{/each}}
+  </div>
+</template>

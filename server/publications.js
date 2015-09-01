@@ -2,6 +2,10 @@ Meteor.publish('projects', function(options) {
   return Projects.find();
 });
 
+Meteor.publish('posts', function() {
+  return Posts.find();
+});
+
 Twit = Meteor.npmRequire('twit');
 Future = Meteor.npmRequire('fibers/future');
 
@@ -16,7 +20,6 @@ var github = new GitHub({
     version: "3.0.0", // required
     protocol: "https",
     host: "api.github.com",
-    timeout: 5000,     // optional
     headers: {
         "user-agent": "My-Cool-GitHub-App" // GitHub is happy with a unique user agent
     }
