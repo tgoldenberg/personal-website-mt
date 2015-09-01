@@ -10,10 +10,10 @@ Twit = Meteor.npmRequire('twit');
 Future = Meteor.npmRequire('fibers/future');
 
 var twit = new Twit({
-    consumer_key: process.env["TWITTER_CONSUMER_KEY"],
-    consumer_secret: process.env["TWITTER_CONSUMER_SECRET"],
-    access_token: process.env["TWITTER_ACCESS_TOKEN"],
-    access_token_secret: process.env["TWITTER_ACCESS_SECRET"]
+    consumer_key: Meteor.settings.consumerKey,
+    consumer_secret: Meteor.settings.consumerSecret,
+    access_token: Meteor.settings.accessToken,
+    access_token_secret: Meteor.settings.accessSecret
 });
 
 var github = new GitHub({
@@ -27,7 +27,7 @@ var github = new GitHub({
 github.authenticate({
     type: "basic",
     username: "tgoldenberg",
-    password: process.env["GITHUB_PASSWORD"]
+    password: Meteor.settings.github
 });
 
 Meteor.publish('github', function(query) {
