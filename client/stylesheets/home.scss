@@ -49,3 +49,21 @@ li a {
     border-radius: 4px;
   }
 }
+b {
+  font-weight: bold;
+}
+.github-feed {
+  padding: .3em;
+  .github-repos {
+    background: white;
+    margin-top: .3em;
+    margin-bottom: .2em;
+    border-radius: 4px;
+    p.small {
+      line-height: .2;
+    }
+    p.updated {
+      font-size: 1.2em;
+    }
+  }
+}
