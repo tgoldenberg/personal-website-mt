@@ -37,15 +37,15 @@
       </div>
       <div class="comment-content">
         <h1>About Me</h1>
-        <p>I like to <a href="{{pathFor 'music'}}">listen to</a> and create music.
+        <p>I like to listen to and create music.
           Here is a link to my <a href="{{pathFor 'music'}}">recordings</a>.
           I also try to record and reflect the varied experiences life throws at me in my
           <a href="{{pathFor 'personalBlog'}}">personal blog</a>.
-          I consider myself a <a href="{{pathFor 'read'}}">life learner</a>
+          I consider myself a life learner
           and am always looking to expand my knowledge.
-          I am ever grateful for having wonderful <a href="{{pathFor 'friends'}}">friends</a>,
-          a loving <a href="{{pathFor 'jess'}}">life partner</a>, and a
-          <a href="{{pathFor 'ella'}}">wondeful dog-ter</a>.
+          I am ever grateful for having wonderful friends,
+          a loving life partner, and a
+          wondeful dog-ter.
         </p>
       </div>
     </div>
@@ -60,7 +60,15 @@
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Blog Posts</h2>
-      <p>Put a bird on it mustache meggings, Godard messenger bag cred Helvetica ugh roof party. Fixie single-origin coffee you probably haven't heard of them mustache. Pug butcher wolf mlkshk vegan tofu, artisan retro synth 90's slow-carb distillery. </p>
+      {{#each posts}}
+        <div class="github-feed">
+          <div class="github-repos">
+            <p class="small"><b>Title:</b> <a href="posts/{{this._id}}">{{this.title}}</a></p>
+            <p><b>Description:</b> {{this.mainParagraph}}</p>
+            <p class="small updated">Posted {{livestamp this.createdAt}}</p>
+          </div>
+        </div>
+      {{/each}}
     </div>
     <div class="sidebar-content">
       <h2 class="sidebar-title">Latest Tweets</h2>
