@@ -1,6 +1,7 @@
 Template.home.helpers({
 	tweets: function() {
-		return Tweets.find().map(function(tweet){return tweet[0]});
+		var tweets = Tweets.find({}, {sort: {createdAt: -1}})
+		return tweets;
 	},
 	github: function() {
 		return Github.find({}, {sort: {updatedAt: -1}, limit: 3});
@@ -9,3 +10,9 @@ Template.home.helpers({
 		return Posts.find({}, {sort: {createdAt: -1}, limit: 3});
 	}
 })
+if (Meteor.isClient) {
+	Meteor.startup(function() {
+		Meteor.subscribe('tweets');
+		Meteor.subscribe('github');
+	});
+}

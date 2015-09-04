@@ -8,7 +8,7 @@
     </div>
     <p class="site-greeting">Welcome to my website!</p>
     <div class="profile-holder social-icon-holder">
-      <a href="https://www.facebook.com/speakitlanguageapp">
+      <a href="https://www.facebook.com/speakitlanguageapp" style="margin-left:40px;">
         <img class="social-icons facebook" src="facebook.png" alt="">
       </a>
       <a href="https://www.twitter.com/tomgoldenberg">
@@ -74,7 +74,7 @@
       <h2 class="sidebar-title">Latest Tweets</h2>
       <div class="tweets-feed">
         {{#each tweets}}
-          <p>{{this}}</p>
+          <p>{{this.text}}</p>
         {{/each}}
       </div>
     </div>
