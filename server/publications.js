@@ -15,15 +15,13 @@ Future = Meteor.npmRequire('fibers/future');
 //     access_token: Meteor.settings.accessToken,
 //     access_token_secret: Meteor.settings.accessSecret
 // });
-// //
-// // if (!twit) {
-  twit = new Twit({
-    consumer_key: process.env["TWITTER_CONSUMER_KEY"],
-    consumer_secret: process.env["TWITTER_CONSUMER_SECRET"],
-    access_token: process.env["TWITTER_ACCESS_TOKEN"],
-    access_token_secret: process.env["TWITTER_ACCESS_SECRET"]
-  })
-// // }
+//
+var twit = new Twit({
+  consumer_key: process.env["TWITTER_CONSUMER_KEY"],
+  consumer_secret: process.env["TWITTER_CONSUMER_SECRET"],
+  access_token: process.env["TWITTER_ACCESS_TOKEN"],
+  access_token_secret: process.env["TWITTER_ACCESS_SECRET"]
+});
 
 var github = new GitHub({
     version: "3.0.0", // required
