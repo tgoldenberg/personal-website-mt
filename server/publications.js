@@ -6,8 +6,8 @@ Meteor.publish('posts', function() {
   return Posts.find();
 });
 
-Twit = Meteor.npmRequire('twit');
-Future = Meteor.npmRequire('fibers/future');
+// Twit = Meteor.npmRequire('twit');
+// Future = Meteor.npmRequire('fibers/future');
 
 // var twit = new Twit({
 //     consumer_key: Meteor.settings.consumerKey,
@@ -17,10 +17,10 @@ Future = Meteor.npmRequire('fibers/future');
 // });
 //
 var twit = new Twit({
-  consumer_key: Meteor.settings.consumerKey || process.env["TWITTER_CONSUMER_KEY"],
-  consumer_secret: Meteor.settings.consumerSecret || process.env["TWITTER_CONSUMER_SECRET"],
-  access_token: Meteor.settings.accessToken || process.env["TWITTER_ACCESS_TOKEN"],
-  access_token_secret: Meteor.settings.accessSecret || process.env["TWITTER_ACCESS_SECRET"]
+  consumer_key: process.env["TWITTER_CONSUMER_KEY"],
+  consumer_secret: process.env["TWITTER_CONSUMER_SECRET"],
+  access_token: process.env["TWITTER_ACCESS_TOKEN"],
+  access_token_secret: process.env["TWITTER_ACCESS_SECRET"]
 });
 
 var github = new GitHub({
