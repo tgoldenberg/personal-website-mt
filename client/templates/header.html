@@ -1,35 +1,49 @@
 <template name="header">
-  <header class="navigation" role="banner">
-    <div class="navigation-wrapper">
-      <a href="{{pathFor 'home'}}" class="logo">
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{pathFor 'home'}}" class="navbar-brand logo">
         <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
       </a>
-      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
-      <nav role="navigation">
-        <ul id="js-navigation-menu" class="navigation-menu show">
-          <li class="nav-link more"><a href="#">Blog</a>
-            <ul class="submenu">
-              <li><a href="{{pathFor 'personalBlog'}}">Personal Blog</a></li>
-              <li><a href="{{pathFor 'technicalBlog'}}">Technical Blog</a></li>
-            </ul>
-          </li>
-          <li class="nav-link more"><a href="#">Music</a>
-            <ul class="submenu">
-              <li><a href="{{pathFor 'music2014'}}">2014</a></li>
-              <li><a href="{{pathFor 'music2015'}}">2015</a></li>
-            </ul>
-          </li>
-          <li class="nav-link more"><a href="#">Projects</a>
-            <ul class="submenu">
-              <li><a href="{{pathFor 'projects'}}">Overview</a></li>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{pathFor 'personalBlog'}}">Personal Blog</a></li>
+            <li><a href="{{pathFor 'technicalBlog'}}">Technical Blog</a></li>
+          </ul>
+        </li><li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Music <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{pathFor 'music2014'}}">2014</a></li>
+            <li><a href="{{pathFor 'music2015'}}">2015</a></li>
+          </ul>
+         
+        </li><li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{pathFor 'projects'}}">Overview</a></li>
               {{# each projects}}
                 <li><a href="{{pathFor 'projectPage'}}">{{title}}</a></li>
               {{/each}}
-            </ul>
-          </li>
-          <li class="nav-link"><a href="{{pathFor 'resume'}}">Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </ul>
+        </li>
+        <li class="nav-link"><a href="{{pathFor 'resume'}}">Resume</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 </template>

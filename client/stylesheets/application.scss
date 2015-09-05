@@ -48,8 +48,8 @@ br {
   }
 }
 .container {
-  @include outer-container;
-  @include row(table);
+  // @include outer-container;
+  // @include row(table);
   max-width: 1300px;
   h1, h2 {
     margin: 0;
@@ -76,18 +76,21 @@ br {
   .home-page-intro {
     @include span-columns(8);
     @include omega();
-    padding-left: 3em;
+    padding-left: 0;
     padding-right: 1em;
+    padding-right: 1em;
+    // margin-left: -5%;
     .space-break {
       height: 1px;
     }
   }
   .home-page-sidebar {
-    @include span-columns(4);
+    // @include span-columns(4);
     background: #f7f7f7;
     position: fixed;
     top: 64px;
     bottom: 0;
+    right: 0; 
     overflow: auto;
 
     .space-break {
