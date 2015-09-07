@@ -1,9 +1,20 @@
 <template name="postPage">
-  <div class="blog-container blog-content">
+  <div class="blog-container blog-content container-fluid">
     <h1>{{title}}</h1>
-    <p class="blog-paragraph main-paragraph">{{mainParagraph}}</p><br/>
+    <div class="row">
+	    <p class="blog-paragraph main-paragraph">{{mainParagraph.text}}</p><hr/><br/>
+    </div>
     {{#each paragraphs}}
-      <p class="blog-paragraph">{{this}}</p><br/>
+    <div class="row">
+    	<div class="col-md-8">
+    		<span class="blog-paragraph">
+     			{{{makeHTML this.text}}}
+	 		</span><br/>
+    	</div>
+    	<div class="col-md-4">
+    		<img width="400" src="{{this.image_url}}"/>
+    	</div>
+    </div>
     {{/each}}
   </div>
 </template>
