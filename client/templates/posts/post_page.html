@@ -6,19 +6,27 @@
     </div>
     {{#each paragraphs}}
     <div class="row">
-    	<div class="col-md-7">
-    		<span class="blog-paragraph">
-     			{{{makeHTML this.text}}}
-	 		</span><br/>
-    	</div>
-    	<div class="col-md-5">
-            {{#if imageUrlExists this}}
-                <img width="400" src="{{this.image_url}}" class="blog-image"/><br/>
-            {{/if}}
-            {{#if gistExists this}}
-        		{{{gist "tgoldenberg" this.gist}}}
-            {{/if}}
-    	</div>
+        {{#if hasExtras this}}
+        	<div class="col-md-7">
+        		<span class="blog-paragraph">
+         			{{{makeHTML this.text}}}
+    	 		</span><br/>
+        	</div>
+        	<div class="col-md-5">
+                {{#if imageUrlExists this}}
+                    <img width="400" src="{{this.image_url}}" class="blog-image"/><br/>
+                {{/if}}
+                {{#if gistExists this}}
+            		{{{gist "tgoldenberg" this.gist}}}
+                {{/if}}
+        	</div>
+        {{else}}
+            <div class="col-md-10 col-md-offset-1">
+                <span class="blog-paragraph">
+                {{{makeHTML this.text}}}
+                </span><br/>
+            </div>
+        {{/if}}
     </div><br/>
     {{/each}}
   </div>

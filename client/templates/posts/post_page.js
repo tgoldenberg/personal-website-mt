@@ -8,5 +8,8 @@ Template.postPage.helpers({
 	},
 	imageUrlExists: function(paragraph) {
 		return paragraph.image_url && paragraph.image_url != "";
+	},
+	hasExtras: function(paragraph) {
+		return (paragraph.image_url && paragraph.image_url != "") || (paragraph.gist && paragraph.gist != "");
 	}
 })
