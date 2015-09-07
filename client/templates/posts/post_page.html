@@ -6,15 +6,20 @@
     </div>
     {{#each paragraphs}}
     <div class="row">
-    	<div class="col-md-8">
+    	<div class="col-md-7">
     		<span class="blog-paragraph">
      			{{{makeHTML this.text}}}
 	 		</span><br/>
     	</div>
-    	<div class="col-md-4">
-    		<img width="400" src="{{this.image_url}}"/>
+    	<div class="col-md-5">
+            {{#if imageUrlExists this}}
+                <img width="400" src="{{this.image_url}}" class="blog-image"/><br/>
+            {{/if}}
+            {{#if gistExists this}}
+        		{{{gist "tgoldenberg" this.gist}}}
+            {{/if}}
     	</div>
-    </div>
+    </div><br/>
     {{/each}}
   </div>
 </template>
