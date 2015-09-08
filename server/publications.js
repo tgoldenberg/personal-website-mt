@@ -12,7 +12,7 @@ Meteor.publish('posts', function() {
 });
 
 var twit = new Twit({
-    consumer_key: Meteor.settings.consumerKey,
+    consumer_key: "VWIjmKIJzcwX7eyBI8RMXCPHw",
     consumer_secret: Meteor.settings.consumerSecret,
     access_token: Meteor.settings.accessToken,
     access_token_secret: Meteor.settings.accessSecret
