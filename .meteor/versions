@@ -1,5 +1,7 @@
 accounts-base@1.2.0
 accounts-password@1.1.1
+accounts-ui@1.1.5
+accounts-ui-unstyled@1.1.7
 autoupdate@1.2.1
 base64@1.0.3
 binary-heap@1.0.3
@@ -17,6 +19,7 @@ ejson@1.0.6
 email@1.0.6
 fastclick@1.0.3
 fourseven:scss@3.2.0
+gentlenode:meteor-gists@0.1.0
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -33,6 +36,7 @@ iron:url@1.0.9
 jquery@1.11.3_2
 json@1.0.3
 launch-screen@1.0.2
+less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7

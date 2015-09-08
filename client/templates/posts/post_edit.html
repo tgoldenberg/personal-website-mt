@@ -1,0 +1,22 @@
+<template name="postEdit">
+	<div class="edit-post-wrapper">v
+		<form id="edit-post-form">
+			<p>Title: </p>
+			<input name="title" type="text" value="{{title}}"/>
+			<p>Type: </p>
+			<input name="type" type="text" value="{{type}}">
+			
+			<p>Paragraphs: </p>
+			{{#each paragraphs}}
+				<div class="paragraph-form">
+					<textarea name="paragraph-text" id="" rows="{{rows this.text}}">{{this.text}}</textarea>
+					<p>Image URL:</p>
+					<input name="paragraph-url" type="text" value="{{this.image_url}}">
+					<p>Gist:</p>
+					<input name="paragraph-gist" type="text" value="{{this.gist}}">
+				</div>
+			{{/each}}
+			<input type="submit" id="form-submit" class="btn btn-lg btn-primary"/>
+		</form>
+	</div>
+</template>

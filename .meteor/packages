@@ -11,7 +11,6 @@ fourseven:scss
 wolves:bourbon
 wolves:neat
 sacha:spin
-markdown
 
 
 http
@@ -19,3 +18,6 @@ bruz:github-api
 copleykj:livestamp
 twbs:bootstrap
 danimal:twit
+markdown
+gentlenode:meteor-gists
+accounts-ui
