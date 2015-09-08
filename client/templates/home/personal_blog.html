@@ -6,7 +6,7 @@
       {{#each posts}}
         <li><a href="posts/{{this._id}}">{{title}}</a></li>
         {{#if noComments}}
-        <a href="{{pathFor 'postPage'}}">0 comments</a>        
+        <a href="{{pathFor 'postPage'}}">0 comment(s)</a>        
         {{else}}
         <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
         {{/if}}
