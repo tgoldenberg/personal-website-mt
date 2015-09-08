@@ -12,7 +12,7 @@ Meteor.publish('posts', function() {
 });
 
 var twit = new Twit({
-    consumer_key: "VWIjmKIJzcwX7eyBI8RMXCPHw",
+    consumer_key: Meteor.settings.consumerKey,
     consumer_secret: Meteor.settings.consumerSecret,
     access_token: Meteor.settings.accessToken,
     access_token_secret: Meteor.settings.accessSecret
@@ -37,7 +37,7 @@ var github = new GitHub({
 github.authenticate({
     type: "basic",
     username: "tgoldenberg",
-    password: Meteor.settings.github || process.env["GITHUB_PASSWORD"]
+    password: Meteor.settings.github
 });
 
 Meteor.publish('github', function(query) {
