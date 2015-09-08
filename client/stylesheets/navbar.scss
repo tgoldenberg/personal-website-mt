@@ -1,6 +1,14 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+.login-holder {
+	margin-right: 15em;
+	a.login-link-text {
+	    color: white;
+	    font-size: 1.5em;
+	    line-height: 2;
+	}
+}
 $light-blue: #64B2CC;
 $base-border-color: gainsboro !default;
 $base-border-radius: 3px !default;

@@ -20,3 +20,4 @@ twbs:bootstrap
 danimal:twit
 markdown
 gentlenode:meteor-gists
+accounts-ui
