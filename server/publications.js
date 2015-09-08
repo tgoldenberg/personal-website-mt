@@ -1,16 +1,15 @@
 Meteor.publish('projects', function(options) {
   return Projects.find();
 });
+
 Meteor.publish('comments', function(postId) {
   check(postId, String);
   return Comments.find({postId: postId});
 });
+
 Meteor.publish('posts', function() {
   return Posts.find();
 });
-
-// Twit = Meteor.npmRequire('twit');
-// Future = Meteor.npmRequire('fibers/future');
 
 var twit = new Twit({
     consumer_key: Meteor.settings.consumerKey,
@@ -18,6 +17,7 @@ var twit = new Twit({
     access_token: Meteor.settings.accessToken,
     access_token_secret: Meteor.settings.accessSecret
 });
+
 // //
 // var twit = new Twit({
 //   consumer_key: process.env["TWITTER_CONSUMER_KEY"],
