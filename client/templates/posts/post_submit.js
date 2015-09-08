@@ -33,8 +33,14 @@ Template.postSubmit.events({
 			type: $(e.target).find('[name=type]').val(),
 			paragraphs: paragraphs
 		};
-		post._id = Posts.insert(post);
-		Router.go('postPage', post);
+		Meteor.call('postInsert', post, function(error, result) {
+	      if (error) {
+	        alert(error);
+	      } else {
+		     Router.go('postPage', { _id: result._id });
+	      }
+	    });
+		
 	},
 	'click #add-paragraph': function(e) {
 		e.preventDefault();

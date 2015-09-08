@@ -3,6 +3,9 @@ Template.technicalBlog.helpers({
   	return Posts.find({type: "technical"}, {sort: {createdAt: 1}}); 
   	},
   isAdmin: function() {
-		return Meteor.userId() == "f8eAFHhRX96oi9FRN";
-	}	
+		return Meteor.userId() == "CdcFrHeRmaNkWrLAS";
+	},
+	noComments: function() {
+		return this.commentsCount == undefined;
+	}
 });

@@ -7,7 +7,7 @@ Template.home.helpers({
 		return Github.find({}, {sort: {updatedAt: -1}, limit: 3});
 	},
 	posts: function() {
-		return Posts.find({}, {sort: {createdAt: -1}, limit: 3});
+		return Posts.find({}, {sort: {createdAt: 1}, limit: 2});
 	}
 })
 if (Meteor.isClient) {
