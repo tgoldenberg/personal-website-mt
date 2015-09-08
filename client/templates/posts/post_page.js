@@ -15,4 +15,18 @@ Template.postPage.helpers({
 	isAdmin: function() {
 		return Meteor.userId() == "f8eAFHhRX96oi9FRN";
 	}
+});
+
+Template.postPage.events({
+	'click #post-delete': function(e) {
+		e.preventDefault();
+		var postId = this._id;
+		Posts.remove(postId, function(error) {
+			if (error) {
+	        alert(error.reason);
+	      } else {
+	        Router.go('home');
+	      }
+		});
+	}
 })
