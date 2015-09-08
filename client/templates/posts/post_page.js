@@ -13,7 +13,7 @@ Template.postPage.helpers({
 		return (paragraph.image_url && paragraph.image_url != "") || (paragraph.gist && paragraph.gist != "");
 	},
 	isAdmin: function() {
-		return Meteor.userId() == "CdcFrHeRmaNkWrLAS";
+		return Meteor.userId() == "6TXMpjPSbWfcqevAo";
 	},
 	comments: function() {
 		return Comments.find({postId: this._id});
