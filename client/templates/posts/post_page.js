@@ -11,5 +11,8 @@ Template.postPage.helpers({
 	},
 	hasExtras: function(paragraph) {
 		return (paragraph.image_url && paragraph.image_url != "") || (paragraph.gist && paragraph.gist != "");
+	},
+	isAdmin: function() {
+		return Meteor.userId() == "f8eAFHhRX96oi9FRN";
 	}
 })

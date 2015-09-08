@@ -1,5 +1,8 @@
 <template name="technicalBlog">
   <div class="blog-container">
+  	{{#if isAdmin}}
+  		<a href="/submit" class="btn btn-default">New Post</a>
+  	{{/if}}
     <h1>Technical Blog</h1>
     <p>Posts: </p>
     <ul class="posts">
